@@ -74,6 +74,8 @@ class Pessoa {
 
     static adicionarPessoa(object) {
 
+        const totalCadastrados = document.querySelector("#total-alunos");
+
         if(object.name != "" && object.sobrenome != "" && object.dataDeNascimento != "" && object.email != "" && object.telefone != "" && object.cargo != "") {
             
             const arrayIdade = object.dataDeNascimento.split("-");
@@ -92,6 +94,7 @@ class Pessoa {
                     
                     if(value == false) {
                         Pessoa.bancoDePessoas.push(object);
+                        totalCadastrados.innerText = `${Pessoa.bancoDePessoas.length}`;
                         body.appendChild(exibirModal(`Usuário ${object.name} adicionado(a) com sucesso`));
                         fecharModal()
                     } else {
@@ -116,7 +119,7 @@ class Pessoa {
     }
 
     static filtrarCargo(value) {
-        const ul = document.querySelector("#lista-de-alunos")
+        const ul = document.querySelector("#lista-de-alunos");
         if(value == "Todos") {
             ul.innerText = "";
             Pessoa.bancoDePessoas.forEach(elem => ul.appendChild(listarUsuario(elem)))
