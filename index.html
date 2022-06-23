@@ -20,29 +20,29 @@
             <h2>Cadastro</h2>
 
             <label for="nome">Nome</label>
-            <input type="text" name="nome" placeholder="Nome" class="field" />
+            <input type="text" id= "nome" name="nome" placeholder="Nome" class="field" />
 
             <label for="sobrenome">Sobrenome</label>
-            <input type="text" name="sobrenome" placeholder="Sobrenome" class="field" />
+            <input type="text" id= "sobrenome" name="sobrenome" placeholder="Sobrenome" class="field" />
 
             <label for="data-nascimento">Data de nascimento</label>
-            <input type="date" name="dataNascimento" class="field" />
+            <input type="date" id= "date" name="dataNascimento" class="field" />
 
             <label for="email">Email</label>
-            <input type="email" name="email" placeholder="Email" class="field" />
+            <input type="email" id= "email" name="email" placeholder="Email" class="field" />
 
             <label for="contato">Contato</label>
-            <input type="text" name="contato" placeholder="Contato" class="field" />
+            <input type="text" id= "contato" name="contato" placeholder="Contato" class="field" />
 
             <label for="telefone">Telefone</label>
-            <input type="tel" name="telefone" placeholder="Telefone" class="field" />
+            <input type="tel" id= "telefone" name="telefone" placeholder="Telefone" class="field" />
 
             <label for="cargo">Cargo</label>
-            <select name="cargo" class="field">
-          <option value="Aluno">Aluno</option>
-          <option value="Facilitador">Facilitador</option>
-          <option value="Instrutor">Instrutor</option>
-        </select>
+            <select name="cargo" id= "cargo" class="field">
+                <option value="Aluno">Aluno</option>
+                <option value="Facilitador">Facilitador</option>
+                <option value="Instrutor">Instrutor</option>
+            </select>
 
             <button id="register-button">Cadastrar</button>
         </form>
@@ -51,16 +51,16 @@
         <h3>Total de cadastrados: <span id="total-alunos"></span></h3>
         <div>
             <select id="cargoOption">
-          <option value="Todos">Todos</option>
-          <option value="Aluno">Aluno</option>
-          <option value="Facilitador">Facilitador</option>
-          <option value="Instrutor">Instrutor</option>
-        </select>
+                <option value="Todos">Todos</option>
+                <option value="Aluno">Aluno</option>
+                <option value="Facilitador">Facilitador</option>
+                <option value="Instrutor">Instrutor</option>
+            </select>
             <button id="btn">Pesquisar</button>
         </div>
         <ul id="lista-de-alunos"></ul>
     </aside>
-    <script src="assets/js/script.js"></script>
+    <script type= "module" src="assets/js/script.mjs"></script>
 </body>
 
 </html>
