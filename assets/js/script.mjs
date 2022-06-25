@@ -86,9 +86,7 @@ class Pessoa {
             const mesAtual        = dataAtual.getMonth()+1;
             const anoMaiorDeIdade = anoAtual - 18;
 
-            if(anoMaiorDeIdade >= arrayIdade[2] || mesAtual >= arrayIdade[1]) {
-
-                if(diaAtual >= arrayIdade[0]) {
+            if(arrayIdade[2] <= anoMaiorDeIdade && arrayIdade[1] <= mesAtual && arrayIdade[0] <= diaAtual) {
 
                     const value = Pessoa.bancoDePessoas.some(elem => elem.email == object.email)
                     
@@ -101,11 +99,6 @@ class Pessoa {
                         body.appendChild(exibirModal("Email já cadastrado!"));
                         fecharModal()
                     }
-
-                } else {
-                    body.appendChild(exibirModal("Não é possível cadastrar menores de 18 anos!"));
-                    fecharModal()
-                }
 
             } else {
                 body.appendChild(exibirModal("Não é possível cadastrar menores de 18 anos!"));
